@@ -64,8 +64,10 @@ function Products() {
                   );
 
                   let message = result
-                    ? Delete(item)
+                    ? Delete(item) + "item deleted"
                     : "You clicked the Cancel button";
+
+                  alert(message);
                 }}
               >
                 Delete
