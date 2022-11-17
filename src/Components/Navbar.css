@@ -1,0 +1,7 @@
+.navbar{
+    background-color: #000000 !important;
+}
+a.nav-link{
+    color: rgb(255, 255, 255) !important;
+    font-weight: bold;
+}

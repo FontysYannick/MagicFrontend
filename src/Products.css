@@ -1,0 +1,27 @@
+
+.table {
+    text-align: center;
+    margin: 5%;
+    margin-left: 35%;
+    margin-right: 25%;
+    overflow-y: scroll;
+    height: 500px;
+}
+
+.grid-container {
+    display: grid;
+    width: 98%;
+    grid-template-columns: 25% 25% 25% 25%;
+    padding: 10px;
+    column-gap: 10px;
+    row-gap: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+.grid-item {
+    background-color:#aaa5a5;
+    color: rgba(255, 255, 255) !important;
+    padding: 20px;
+    font-size: 20px;
+    text-align: center;
+}
