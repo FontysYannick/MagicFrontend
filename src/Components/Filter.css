@@ -1,0 +1,24 @@
+.filter-menu{
+    padding: 20px;
+    color: #3c3c3c;
+}
+
+ul.no-bullet{
+    padding-left: 0;
+    margin-left: 0;
+    list-style: none;
+}
+
+.option{
+    padding: 0.333rem 1.333rem !important;
+    text-decoration: none !important;
+    color: black;
+}
+
+.title{
+    padding: 0.5rem 0.166rem;
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: #3c3c3c;
+    line-height: 1;
+}
