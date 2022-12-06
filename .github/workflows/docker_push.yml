@@ -28,4 +28,4 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: yannickfontys/MAGICFRONTEND_container:latest
+          tags: yannickfontys/magicfront_container:latest
