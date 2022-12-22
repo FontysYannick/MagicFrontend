@@ -8,6 +8,7 @@ import { useNavigate } from "react-router-dom";
 
 function Products() {
   const [producten, setProducten] = useState([]);
+
   fetch("https://localhost:7157/api/Product")
     .then((response) => response.json())
     .then((json) => setProducten(json));

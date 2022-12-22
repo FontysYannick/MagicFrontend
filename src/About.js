@@ -4,11 +4,10 @@ import Navbar from "./Components/Navbar";
 function About() {
   return (
     <div>
-      <div>
-        <Navbar />
-      </div>
+      <Navbar />
 
-      <h1>Hey</h1>
+      <h1>Hello world</h1>
+      <h1>why does this exist</h1>
     </div>
   );
 }
