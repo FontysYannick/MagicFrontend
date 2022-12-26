@@ -12,7 +12,7 @@ function Cart() {
 
   const Delete = (product) => {
     console.log(product);
-    fetch("https://localhost:7157/api/Product", {
+    fetch("https://localhost:7157/api/Cart?user=" + 2, {
       method: "DELETE",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(product),
@@ -28,7 +28,7 @@ function Cart() {
         <table class="table">
           <thead class="header">
             <tr>
-              <th scope="col">Productnaam</th>
+              <th scope="col">Productname</th>
               <th scope="col">Amount</th>
               <th scope="col"> </th>
             </tr>
@@ -53,7 +53,7 @@ function Cart() {
                         : "You clicked the Cancel button";
                     }}
                   >
-                    Verwijderen
+                    Delete
                   </Button>
                 </td>
               </tr>

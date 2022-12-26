@@ -5,6 +5,7 @@ import Navbar from "./Components/Navbar";
 import Filter from "./Components/Filter";
 import Button from "@mui/material/Button";
 import { useNavigate } from "react-router-dom";
+import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 
 function Products() {
   const [producten, setProducten] = useState([]);
@@ -30,6 +31,16 @@ function Products() {
       .then((res) => console.log(res));
   };
 
+  const AddCart = (product) => {
+    fetch("https://localhost:7157/api/Cart?user=" + 2, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(product),
+    }).then(() => {
+      console.log("New product Added" + product);
+    });
+  };
+
   return (
     <div>
       <Navbar />
@@ -45,7 +56,17 @@ function Products() {
                     src="https://www.bazaargames.nl/images/cards/l/mic/wilhelt_the_rotcleaver_9063569_1.jpg"
                     className="d-inline-block align-top"
                   />
-                  <h1 id="name">{item.Name}</h1>
+                  <h1 id="name">
+                    {item.Name}
+                    <Button
+                      variant="outlined"
+                      onClick={() => {
+                        AddCart(item);
+                      }}
+                    >
+                      <AddShoppingCartIcon />
+                    </Button>
+                  </h1>
                   <h4>
                     Color: {item.Color} Stock: {item.Stock}
                   </h4>
@@ -57,7 +78,6 @@ function Products() {
                   >
                     Edit
                   </Button>
-                  {"  "}
                   <Button
                     variant="outlined"
                     color="error"
