@@ -43,6 +43,7 @@ const FRMAddProduct = () => {
           <TextField
             id="standard-basic"
             label="Product"
+            name="name"
             variant="standard"
             fullWidth
             value={name}
@@ -50,6 +51,7 @@ const FRMAddProduct = () => {
           />
           <TextField
             id="standard-basic"
+            name="color"
             label="Color"
             variant="standard"
             fullWidth
@@ -58,6 +60,7 @@ const FRMAddProduct = () => {
           />
           <TextField
             id="standard-basic"
+            name="stock"
             label="Stock"
             variant="standard"
             fullWidth
